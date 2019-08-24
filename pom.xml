@@ -93,5 +93,6 @@
 		<module>xy-spring-cloud-first-dept-8001</module>
 		<module>xy-spring-cloud-first-api</module>
 		<module>xy-spring-cloud-first-provider-dept-8001</module>
+		<module>xy-spring-cloud-first-consumer-dept-80</module>
 	</modules>
 </project>
