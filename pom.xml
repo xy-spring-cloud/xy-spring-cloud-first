@@ -28,6 +28,10 @@
 			</dependency>
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-actuator</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
 				<version>1.5.9.RELEASE</version>
 				<type>pom</type>
@@ -77,6 +81,7 @@
 		</resources>
 		<plugins>
 			<plugin>
+				<!-- 只要遇到上面src/main/resources目录下文件里面有以$开头$结尾的标识符，就进行解析，解析为pom.xml的相关变量 -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
 				<configuration>

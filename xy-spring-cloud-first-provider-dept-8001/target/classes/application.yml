@@ -12,7 +12,7 @@ mybatis:
 ## 服务名/数据库/数据源配置
 spring: 
   application:
-    name: provider-dept-8001 #与server.context-path有什么区别
+    name: provider-dept-8001 #eurakla中对外暴露的微服务名字， 与server.context-path有什么区别
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
@@ -24,4 +24,15 @@ spring:
       min-idle: 5 # 维持最小连接数
       max-total: 5 # 最大连接数
       max-wait-millis: 1000 # 等待时间
+
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://localhost:7001/eureka/ 
+  instance:
+    instance-id: provider-dept-8001
+    prefer-ip-address: true
     
+info:
+  app.name: xy-spring-cloud-first
+  build.version: 0.0.1-SNAPSHOT
