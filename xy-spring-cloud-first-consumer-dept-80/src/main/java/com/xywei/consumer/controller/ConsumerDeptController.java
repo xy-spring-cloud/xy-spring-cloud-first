@@ -1,6 +1,5 @@
 package com.xywei.consumer.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,9 @@ import com.xywei.entity.Dept;
 @RestController
 public class ConsumerDeptController {
 
-	private static final String PROVIDER_URL_SUFFIX = "http://127.0.0.1:8001/";
+//	private static final String PROVIDER_URL_SUFFIX = "http://127.0.0.1:8001/";
+	// ribbon与eureka整合后可以直接使用服务名字，而不需要知道IP+port
+	private static final String PROVIDER_URL_SUFFIX = "http://provider-dept-service/";
 
 	@Autowired
 	private RestTemplate restTemplate;
