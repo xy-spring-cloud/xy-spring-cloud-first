@@ -1,0 +1,1 @@
+**与consumer-dept-80互斥，两种不同的调用provider方式**
