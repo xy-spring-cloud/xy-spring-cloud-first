@@ -104,5 +104,6 @@
 		<module>xy-spring-cloud-first-eureka-7003</module>
 		<module>xy-spring-cloud-first-provider-dept-8002</module>
 		<module>xy-spring-cloud-first-provider-dept-8003</module>
+		<module>xy-spring-cloud-first-consumer-dept-feign-80</module>
 	</modules>
 </project>

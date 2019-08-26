@@ -21,12 +21,12 @@ public class ConsumerApplication80Configuration {
 
 	@Bean
 	public IRule iRule() {
-		// 轮询
-//		return new RoundRobinRule();
+		// 轮询，与@ribbonclient中同时存在，看是否会报错？还是覆盖？
+		return new RoundRobinRule();
 		// 随机
 //		return new RandomRule();
 		// 重试
-		return new RetryRule();
+//		return new RetryRule();
 	}
 
 }
