@@ -26,6 +26,7 @@ public class DeptController {
 	private DeptService deptService;
 
 	@GetMapping("/depts")
+	@HystrixCommand
 	public List<Dept> listDepts() {
 		return deptService.list();
 	}

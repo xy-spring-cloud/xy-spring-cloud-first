@@ -105,5 +105,6 @@
 		<module>xy-spring-cloud-first-provider-dept-8002</module>
 		<module>xy-spring-cloud-first-provider-dept-8003</module>
 		<module>xy-spring-cloud-first-consumer-dept-feign-80</module>
+		<module>xy-spring-cloud-hystrix-dashboard-9001</module>
 	</modules>
 </project>
