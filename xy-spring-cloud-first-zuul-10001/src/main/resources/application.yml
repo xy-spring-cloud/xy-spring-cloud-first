@@ -1,0 +1,29 @@
+
+server:
+  port: 10001
+  
+spring:
+  application:
+    name: xy-spring-cloud-zuul-service # 微服务名字
+     
+eureka:
+  instance:
+    hostname: xy.zuul.com # 主机名映射
+    instance-id:  xy-spring-cloud-zuul
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+    
+zuul:
+  prefix: /xy
+  ignored-services: provider-dept-service
+  routes:
+    dept.serviceId: provider-dept-service
+    dept.path: /mydept/**
+   
+    
+    
+info:
+  app.name: $project.build.finalName$
+  build.version: $project.version$
