@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.xywei.entity.Dept;
+import com.xywei.entity.DeptMSG;
 import com.xywei.service.DeptService;
 
 @RestController
@@ -33,9 +35,43 @@ public class DeptController {
 		return deptService.add(dept);
 	}
 
+	/**
+	 * 
+	 * @Datetime 2019年8月27日 下午12:30:59<br/>
+	 * @Description 添加服务熔断
+	 * @param id
+	 * @return
+	 */
 	@GetMapping("/dept/{id}")
+	@HystrixCommand(fallbackMethod = "fallBack_FinDeptById")
 	public Dept finDeptById(@PathVariable("id") Long id) {
-		return deptService.get(id);
+
+		Dept dept = deptService.get(id);
+
+		if (null == dept) {
+
+			System.out.println("1==========================服务熔断了=================================================");
+			DeptMSG deptMSG = new DeptMSG("没有数据，来自provider的消息");
+			dept.setDeptno(id);
+			System.out.println("没有数据");
+			System.out.println("2===========================================================================");
+			throw new RuntimeException(deptMSG.getDeptno() + " " + deptMSG.getMessage());
+		}
+
+		return dept;
+	}
+
+	/**
+	 * 服务器熔断以后调用的方法
+	 * 
+	 * @Datetime 2019年8月27日 下午12:33:01<br/>
+	 * @Description
+	 * @return
+	 */
+	public Dept fallBack_FinDeptById(@PathVariable("id") Long id) {
+//		DeptMSG dept = new DeptMSG("没有数据，来自provider的消息");
+//		dept.setDeptno(id);
+		return new Dept((long) id, "没有信息", "没有数据");
 	}
 
 	@GetMapping("/service")

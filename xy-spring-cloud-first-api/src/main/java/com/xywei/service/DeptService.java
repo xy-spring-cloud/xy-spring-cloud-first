@@ -16,7 +16,7 @@ import com.xywei.entity.Dept;
  * @Datetime 2019年8月26日 下午10:53:55<br/>
  *           TODO 这里的URL一定要和provider controller的一致？待测试
  */
-@FeignClient(name = "provider-dept-service")
+@FeignClient(name = "provider-dept-service", fallbackFactory = DeptServiceFallbackFactory.class)
 public interface DeptService {
 
 	@GetMapping("/depts")

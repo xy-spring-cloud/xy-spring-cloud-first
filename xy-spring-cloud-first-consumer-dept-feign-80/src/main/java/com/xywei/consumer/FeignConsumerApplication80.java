@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
+
 /**
  * 
  * @author future
@@ -14,8 +15,9 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients(basePackages = {"com.xywei.service"})
+@EnableFeignClients(basePackages = { "com.xywei" })
 //@ComponentScan(basePackages = "com.xywei") 不用也没问题
+@ComponentScan(basePackages = "com.xywei")
 public class FeignConsumerApplication80 {
 
 	public static void main(String[] args) throws Exception {

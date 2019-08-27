@@ -1,2 +1,4 @@
 E:\workspace-sts-3.9.9.RELEASE\xy-spring-cloud-first\xy-spring-cloud-first-api\src\main\java\com\xywei\service\DeptService.java
+E:\workspace-sts-3.9.9.RELEASE\xy-spring-cloud-first\xy-spring-cloud-first-api\src\main\java\com\xywei\service\DeptServiceFallbackFactory.java
 E:\workspace-sts-3.9.9.RELEASE\xy-spring-cloud-first\xy-spring-cloud-first-api\src\main\java\com\xywei\entity\Dept.java
+E:\workspace-sts-3.9.9.RELEASE\xy-spring-cloud-first\xy-spring-cloud-first-api\src\main\java\com\xywei\entity\DeptMSG.java

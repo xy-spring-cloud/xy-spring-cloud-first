@@ -1,2 +1,5 @@
+com\xywei\service\DeptServiceFallbackFactory$1.class
+com\xywei\service\DeptServiceFallbackFactory.class
 com\xywei\entity\Dept.class
+com\xywei\entity\DeptMSG.class
 com\xywei\service\DeptService.class

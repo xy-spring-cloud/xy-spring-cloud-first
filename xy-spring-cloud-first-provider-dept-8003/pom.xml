@@ -16,6 +16,12 @@
 			<artifactId>xy-spring-cloud-first-api</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+
+		<!-- hystrix服务熔断 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix</artifactId>
+		</dependency>
 		<!-- actuator监控信息完善 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
