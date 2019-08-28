@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      uri: http://xy.config.com:11000
+      label: master
+      name: privider-dept-8003
+      profile: dev # 必须写否则启动的时候报错

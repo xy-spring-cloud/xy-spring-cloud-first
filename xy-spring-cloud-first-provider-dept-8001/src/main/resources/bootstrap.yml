@@ -2,6 +2,7 @@ spring:
   cloud:
     config:
       name: privider-dept-8001
-      uri: http://xy.config.com:6666
+      uri: http://xy.config.com:11000
       label: master
-      profile: dev
+      profile: dev # 必须写否则启动的时候报错
+      
