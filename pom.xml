@@ -94,8 +94,6 @@
 	</build>
 
 	<modules>
-		<module>xy-spring-cloud-api</module>
-		<module>xy-spring-cloud-first-dept-8001</module>
 		<module>xy-spring-cloud-first-api</module>
 		<module>xy-spring-cloud-first-provider-dept-8001</module>
 		<module>xy-spring-cloud-first-consumer-dept-80</module>
@@ -107,5 +105,6 @@
 		<module>xy-spring-cloud-first-consumer-dept-feign-80</module>
 		<module>xy-spring-cloud-hystrix-dashboard-9001</module>
 		<module>xy-spring-cloud-first-zuul-10001</module>
+		<module>xy-spring-cloud-first-config-server-11000</module>
 	</modules>
 </project>

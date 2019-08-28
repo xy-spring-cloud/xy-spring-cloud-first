@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: privider-dept-8001
+      uri: http://xy.config.com:6666
+      label: master
+      profile: dev

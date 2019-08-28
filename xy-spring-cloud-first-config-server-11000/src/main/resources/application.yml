@@ -1,0 +1,12 @@
+server:
+  port: 11000
+spring:
+  application:
+    name: xy-spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Proxyei/spring_cloud_config_profiles.git #公有不用用户名密码
+#          uri: https://github.com/Proxyei/spring_cloud_config_profiles_private.git # 私有需要设置用户名密码          
+#          uri: git@github.com:Proxyei/spring_cloud_config_profiles.git
